@@ -1,11 +1,19 @@
-#ifndef __DUCK_H
-#define __DUCK_H
+#ifndef DUCK_H
+#define DUCK_H
+
+# include <iostream>
+#include "flybehavior.h"
+
+using namespace std;
 
 class Duck {
-        virtual void quack();
-        virtual void swim();
-        virtual void display() = 0;
+public:
+    FlyBehavior *flyBehavior;
+
+    Duck();
+    void performFly();
+    void swim();
+    virtual void display() = 0;
 };
 
-
-#endif 
+#endif // DUCK_H

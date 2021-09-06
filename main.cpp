@@ -1,7 +1,13 @@
+#include <QCoreApplication>
 #include "duck.h"
+#include "redheadduck.h"
 
-int main() {
-   Duck *d1 = new Duck();
-   d1->quack();
-   return 0;
-} 
+int main(int argc, char *argv[])
+{
+    QCoreApplication a(argc, argv);
+
+    RedheadDuck *duck1 = new RedheadDuck();
+    duck1->performFly();
+
+    return a.exec();
+}
